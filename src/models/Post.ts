@@ -29,4 +29,4 @@ let postSchema: Schema = new Schema({
     }
 })
 
-export default model('Post', postSchema);
+export default model('/', postSchema);

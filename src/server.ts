@@ -6,7 +6,9 @@ import * as helmet from 'helmet';
 import * as cors from 'cors';
 import * as compression from 'compression';
 
+
 // import router
+import postRouter from './router/postRouter';
 
 // Server class
 class Server {
@@ -21,7 +23,9 @@ class Server {
     public config(){
         //set mongoose
         const MONGO_URI = 'mongodb://localhost/api';
-        mongoose.connect(MONGO_URI || process.env.MONGO_URI)
+        mongoose.createConnection(MONGO_URI || process.env.MONGO_URI,{
+            useMongoClient: true
+        })
 
         // config
         this.app.use(bodyParser.urlencoded({ extended: true }));
@@ -38,7 +42,10 @@ class Server {
         router = express.Router();
 
         this.app.use('/', router);
-        // this.app.use('api/v1.0/posts', PostRouter);
+        // this.app.use('/:slug', );
+
 
     }
 }
+
+export default new Server().app;
