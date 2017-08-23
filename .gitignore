@@ -1,0 +1,8 @@
+node_modules/
+dist/
+typings
+.vscode
+/ts/sandbox/*
+/ts/sandbox/sandbox.ts
+/logger.log
+/npm-debug.log
