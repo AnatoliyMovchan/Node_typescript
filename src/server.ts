@@ -9,6 +9,7 @@ import * as compression from 'compression';
 
 // import router
 import PostRouter from './router/PostRouter';
+import UserRouter from './router/UserRouter'
 
 // Server class
 class Server {
@@ -43,6 +44,7 @@ class Server {
 
         this.app.use('/', router);
          this.app.use('/api/posts', PostRouter);
+         this.app.use('/api/users', UserRouter);
 
 
 

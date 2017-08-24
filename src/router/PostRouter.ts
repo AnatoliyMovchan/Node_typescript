@@ -55,12 +55,12 @@ class PostRouter{
         const slug: string = req.body.slug;
         const content: string = req.body.content;
         const featuredImage: string = req.body.featuredImage;
+
         const post = new Post({
             title, 
             slug,
             content,
             featuredImage,
-
         })
 
         post.save()
