@@ -8,7 +8,7 @@ import * as compression from 'compression';
 
 
 // import router
-import postRouter from './router/postRouter';
+import PostRouter from './router/PostRouter';
 
 // Server class
 class Server {
@@ -23,7 +23,7 @@ class Server {
     public config(){
         //set mongoose
         const MONGO_URI = 'mongodb://localhost/api';
-        mongoose.createConnection(MONGO_URI || process.env.MONGO_URI,{
+        mongoose.connect(MONGO_URI || process.env.MONGO_URI,{
             useMongoClient: true
         })
 
@@ -42,7 +42,8 @@ class Server {
         router = express.Router();
 
         this.app.use('/', router);
-        // this.app.use('/:slug', );
+         this.app.use('/api/posts', PostRouter);
+
 
 
     }
