@@ -9,7 +9,6 @@ class PostRouter{
     constructor(){
         this.router = Router();
         this.routes();
-        
     }
 
     public GetPosts(req: Request, res: Response):void{

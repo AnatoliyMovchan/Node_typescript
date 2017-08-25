@@ -23,8 +23,8 @@ class Server {
     }
     public config(){
         //set mongoose
-        const MONGO_URI = 'mongodb://localhost/api';
-        mongoose.connect(MONGO_URI || process.env.MONGO_URI,{
+        // const MONGO_URI = '';
+        mongoose.connect('mongodb://localhost/api',{
             useMongoClient: true
         })
 

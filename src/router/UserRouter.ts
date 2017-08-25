@@ -60,7 +60,7 @@ class UserRouter{
             name, 
             username,
             email,
-            password
+            password,
         })
 
         user.save()

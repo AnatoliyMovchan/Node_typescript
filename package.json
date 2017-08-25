@@ -17,7 +17,8 @@
     "helmet": "^3.8.1",
     "mongoose": "^4.11.7",
     "morgan": "^1.8.2",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "yarm": "^0.4.0"
   },
   "devDependencies": {
     "@types/express": "^4.0.37",

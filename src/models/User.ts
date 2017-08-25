@@ -13,18 +13,21 @@ let userSchema: Schema = new Schema({
     username: {
         type: String,
         default: '',
-        required: true
+        required: true,
+        unique: true
+        
     },
     email: {
         type: String,
         default: '',
         required: true,
-        unique: true
     },
     password:{
         type: String,
         default: '',
-        required: true
+        required: true,
+        unique: true
+        
     }
 })
 

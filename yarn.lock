@@ -1861,3 +1861,7 @@ xdg-basedir@^2.0.0:
   resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-2.0.0.tgz#edbc903cc385fc04523d966a335504b5504d1bd2"
   dependencies:
     os-homedir "^1.0.0"
+
+yarm@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/yarm/-/yarm-0.4.0.tgz#3d9a73abee490ece77c88ebbd0929fea6f72907b"
