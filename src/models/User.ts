@@ -28,7 +28,11 @@ let userSchema: Schema = new Schema({
         required: true,
         unique: true
         
-    }
+    },
+    posts: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Post'
+    }]
 })
 
 export default model('User', userSchema);
