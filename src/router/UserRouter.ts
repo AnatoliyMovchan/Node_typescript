@@ -1,6 +1,5 @@
 import { Router, Request, Response, NextFunction } from 'express';
 import User from '../models/User';
-import Post from '../models/Post';
 
 
 class UserRouter{
@@ -35,7 +34,7 @@ class UserRouter{
     public GetUser(req: Request, res: Response):void{
         const username: string = req.params.username;
         
-        User.findOne({ username }).populate('posts')
+        User.findOne({ username }).populate("posts")
         .then((data) =>{
             const status = res.statusCode;
             res.status(200).json({
